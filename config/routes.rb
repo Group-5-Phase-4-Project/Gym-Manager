@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
   resources :reviews
-  resources :names
   resources :trainees
-  resources :trainers
-  resources :programs
+  resources :trainers, only:[:index, :show]
+  resources :programs, only:[:index, :show]
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")

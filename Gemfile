@@ -9,6 +9,9 @@ gem "rails", "~> 7.0.4"
 # Use sqlite3 as the database for Active Record
 gem "sqlite3", "~> 1.4"
 
+#allows you to generate your JSON in an object-oriented and convention-driven manner
+gem 'active_model_serializers', '~> 0.10.13'
+
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
 

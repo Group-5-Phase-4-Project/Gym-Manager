@@ -159,7 +159,7 @@ Trainee.create(
 puts "starting review"
 Review.create(
     name: "Annitah",
-    body: "I love the programs that I get from mhy trainers. Kudos!",
+    body: "I love the programs that I get from my trainers. Kudos!",
     program_id: rand(1..5),
     trainee_id: rand(1..10)
 )
@@ -189,12 +189,4 @@ Review.create(
 )
 puts "Done seeding"
 
-# puts 'CREATING ROLES'
-# Trainee.create([
-#   { :name => 'Anitah' }, 
-#   { :age => '25' },
-#   { :program_picked => 'Calisthenics' }
-# ])
-# puts 'SETTING UP DEFAULT USER LOGIN'
-# user = Trainee.create! :name => 'User1', :age => 20, programme_picked: "Calisthenics"
 
