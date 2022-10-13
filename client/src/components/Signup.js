@@ -1,17 +1,17 @@
-import React, {useState, useEffect} from "react"
+import React, { useState, useEffect } from "react"
 import "./Signup.css"
 import { quotes } from "./data"
 import { useHistory } from "react-router-dom"
 
-function Signup({getUser}) {
-    const [signupDetails, setSignupDetails] = useState({name: "", password: "", age: "", gender: "", weight: "", height: ""})
+function Signup({ getUser }) {
+    const [signupDetails, setSignupDetails] = useState({ name: "", password: "", age: "", gender: "", weight: "", height: "" })
     let history = useHistory()
 
     const handleChange = (e) => {
         setSignupDetails(sign => ({ ...sign, [e.target.name]: e.target.value }))
     }
 
-    function handleSubmit(e){
+    function handleSubmit(e) {
         e.preventDefault()
         const serverOptions = {
             method: "POST",
@@ -21,16 +21,16 @@ function Signup({getUser}) {
             body: JSON.stringify(signupDetails)
         }
         fetch(`/trainees`, serverOptions)
-        .then(r => r.json())
-        .then((user) => {
-            getUser(user)
-            history.push("/home/main")
+            .then(r => r.json())
+            .then((user) => {
+                getUser(user)
+                history.push("/home/main")
 
-        })
-        
-      
+            })
+
+
     }
-    
+
 
     return (
         <div className="signup" style={{ backgroundImage: `url("https://images.pexels.com/photos/4944311/pexels-photo-4944311.jpeg?auto=compress&cs=tinysrgb&w=400")` }} >
@@ -38,9 +38,9 @@ function Signup({getUser}) {
             <div className="left-blur" >
                 <div className="left-container">
                     <h1>Just Gym-It</h1>
-                    
+
                     <form onSubmit={handleSubmit}>
-                        <input type="text" placeholder="Username" name="name" value={signupDetails.name} onChange={handleChange}/>
+                        <input type="text" placeholder="Username" name="name" value={signupDetails.name} onChange={handleChange} />
                         <input type="password" placeholder="Password" name="password" onChange={handleChange} />
                         <input type="text" placeholder="Age" name="age" value={signupDetails.age} onChange={handleChange} />
                         <input type="text" placeholder="Gender" name="gender" value={signupDetails.gender} onChange={handleChange} />
@@ -49,18 +49,31 @@ function Signup({getUser}) {
                         <button className="signup-btn">Sign Up</button>
                     </form>
                 </div>
+
+                <div className="left-login">
+                    <div className="left-login-container">
+                    <h1>Just Gym-It</h1>
+                    <form>
+                        <input type="text" placeholder="Username" name="name" value={signupDetails.name} onChange={handleChange} />
+                        <input type="password" placeholder="Password" name="password" onChange={handleChange} />
+                        <button className="signup-btn">Login</button>
+                    </form>
+                    <p>Sign Up Here</p>
+                    </div>
+                    
+                </div>
             </div>
             <div className="right-blur">
                 <div className="right-container">
                     <div className="right-text">
-                    <span>“</span>
-                    <h2>{quotes[Math.floor(Math.random() * quotes.length)]}</h2>
+                        <span>“</span>
+                        <h2>{quotes[Math.floor(Math.random() * quotes.length)]}</h2>
                     </div>
 
                     <div className="right-text-login">
                         <p>Sign In Here</p>
                     </div>
-                    
+
                 </div>
             </div>
         </div>
