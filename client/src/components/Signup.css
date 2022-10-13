@@ -1,0 +1,117 @@
+*{
+    max-height: 100vh;
+    overflow: hidden;
+    padding: 0;
+    margin: 0; 
+    box-sizing: border-box;
+}
+
+.signup{
+    /* background-color: blue; */
+    padding: 0px;
+    
+    width: 800px;
+    background-color: blue;
+    height: 90vh;
+    margin: 30px auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+}
+
+.left-blur{
+    
+    width: 50%;
+    height: 90vh;
+    background: rgba(0,0,0,0.55);
+-webkit-backdrop-filter: blur(7px);
+backdrop-filter: blur(7px);
+
+}
+
+.left-container{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+
+.left-container h1{
+    color: #1E1031;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+input, select, option{
+    outline: none;
+ 
+    border-bottom: 2px solid #1E1031;
+    border-left: 2px solid #1E1031;
+    border-right: 2px solid #DECBC4;
+    border-top: 2px solid #DECBC4;
+ 
+    margin-top: 20px;
+    padding: 10px;
+    width: 100%;
+    background-color: transparent;
+    color: #1E1031;    
+}
+
+input::placeholder{
+color: #1E1031;
+}
+
+
+.signup-btn{
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    background-color: #1E1031;
+    color: #DECBC4;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.right-blur{
+   height: 90vh;
+    width: 50%;
+    background: rgba(30,16,49,0.6);
+-webkit-backdrop-filter: blur(7px);
+backdrop-filter: blur(7px);
+}
+
+.right-container{
+    width: 50%;
+    color: #DECBC4; 
+    align-items: center;
+    justify-content: center;
+    margin: 120px auto;
+    position: relative;
+    
+    
+    
+    
+}
+.right-text span{
+    font-size: 120px;
+
+    
+}
+
+.right-text h2{
+    font-size: 30px;
+    margin-top: -30px;
+}
+
+.right-text-login{
+    
+    position: absolute;
+
+}
+
+
