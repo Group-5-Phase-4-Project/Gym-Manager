@@ -9,32 +9,39 @@ puts "starting programs"
 Program.create(
     name: "Cardio",
     duration:  1,
-    description: "Any rhythmic activity that raises your heart rate into your target heart rate zone. This is the zone where you burn the most fat and calories"
+    description: "Any rhythmic activity that raises your heart rate into your target heart rate zone. This is the zone where you burn the most fat and calories",
+    image: "https://cdn.pixabay.com/photo/2017/05/25/15/08/jogging-2343558__340.jpg"
+    
 )
 Program.create(
     name: "Strength",
     duration: 3,
-    description: "Resistance training is the use of resistance to muscular contraction to build strength, anaerobic endurance and size of skeletal muscles."
+    description: "Resistance training is the use of resistance to muscular contraction to build strength, anaerobic endurance and size of skeletal muscles.",
+    image: "https://images.pexels.com/photos/4944312/pexels-photo-4944312.jpeg?auto=compress&cs=tinysrgb&w=400"
 )
 Program.create(
     name: "Yoga",
     duration: 2,
-    description: "A spiritual discipline based on an extremely subtle science, which focuses on bringing harmony between mind and body. It is an art and scince of healthy living"
+    description: "A spiritual discipline based on an extremely subtle science, which focuses on bringing harmony between mind and body. It is an art and scince of healthy living",
+    image: "https://images.pexels.com/photos/4327046/pexels-photo-4327046.jpeg?auto=compress&cs=tinysrgb&w=400"
 )
 Program.create(
     name: "Dance",
     duration: 2,
-    description: "Whole-body workout that's actually fun. It's good for your heart, it makes you stronger, and it can help with balance and coordination. A 30-minute dance class burns between 130 and 250 calories, about the same as jogging."
+    description: "Whole-body workout that's actually fun. It's good for your heart, it makes you stronger, and it can help with balance and coordination. A 30-minute dance class burns between 130 and 250 calories, about the same as jogging.",
+    image: "https://images.pexels.com/photos/1701207/pexels-photo-1701207.jpeg?auto=compress&cs=tinysrgb&w=400"
 )
 Program.create(
     name: "Calisthenics",
     duration: 4,
-    description: "Exercises that don't rely on anything but a person's own body weight."
+    description: "Exercises that don't rely on anything but a person's own body weight.",
+    image: "https://images.pexels.com/photos/8401805/pexels-photo-8401805.jpeg?auto=compress&cs=tinysrgb&w=400"
 )
 Program.create(
     name: "Pushups",
     duration: 1,
-    description: "Helps to build muscle and improve strength throughout the upper body. It targets the muscles in your chest (pectoralis major), arms (particularly the triceps) and the shoulders (especially the scapular stabilizing muscles)."
+    description: "Helps to build muscle and improve strength throughout the upper body. It targets the muscles in your chest (pectoralis major), arms (particularly the triceps) and the shoulders (especially the scapular stabilizing muscles).",
+    image: "https://images.pexels.com/photos/4753990/pexels-photo-4753990.jpeg?auto=compress&cs=tinysrgb&w=400"
 )
 puts "starting trainers data"
 Trainer.create(
