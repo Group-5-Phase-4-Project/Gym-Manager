@@ -47,12 +47,10 @@ form{
 
 input, select, option{
     outline: none;
- 
     border-bottom: 2px solid #1E1031;
     border-left: 2px solid #1E1031;
     border-right: 2px solid #DECBC4;
     border-top: 2px solid #DECBC4;
- 
     margin-top: 20px;
     padding: 10px;
     width: 100%;
@@ -63,7 +61,6 @@ input, select, option{
 input::placeholder{
 color: #1E1031;
 }
-
 
 .signup-btn{
     margin-top: 20px;
@@ -91,16 +88,10 @@ backdrop-filter: blur(7px);
     align-items: center;
     justify-content: center;
     margin: 120px auto;
-    position: relative;
-    
-    
-    
-    
+    position: relative;   
 }
 .right-text span{
-    font-size: 120px;
-
-    
+    font-size: 120px;    
 }
 
 .right-text h2{
