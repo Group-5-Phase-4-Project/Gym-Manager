@@ -1,7 +1,37 @@
 .sidebar{
-    background-color: blue;
+   
     padding: 10px;
     width: 200px;
     height: 100vh;
 }
+ .sidebar .logo{
+     margin-top: 20px;
+     color: #1E1031;
 
+ }
+
+.sidebar .options{
+    margin-top: 20px;
+    align-items: center;
+    color: #1E1031;
+}
+
+.options h3{
+  text-transform: uppercase;
+    margin-top: 30px;
+    transition: 0.7s ease-in-out;
+    cursor: pointer;
+}
+
+.options h3:hover{
+    font-size: 24px;
+    transition: 0.2s ease-in-out;
+    color: #83526F;
+}
+
+.options .stick{
+    background-color: #1E1031;
+    width: 3px;
+    height: 40px;
+    margin: 20px auto;
+}

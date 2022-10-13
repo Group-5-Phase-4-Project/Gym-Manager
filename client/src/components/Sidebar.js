@@ -11,10 +11,13 @@ function Sidebar(){
                 <h1>Just Gym-It <FontAwesomeIcon icon={faDumbbell}/></h1>
             </div>
             <div className="options">
-                <p>Home</p>
-                <p>Programs</p>
-                <p>Trainers</p>
-                <p>Reviews</p>
+                <h3>Home</h3>
+                <div className="stick"></div>
+                <h3>Programs</h3>
+                <div className="stick"></div>
+                <h3>Trainers</h3>
+                <div className="stick"></div>
+                <h3>Reviews</h3>
             </div>  
         </div>
     )
