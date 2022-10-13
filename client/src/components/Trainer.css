@@ -1,0 +1,57 @@
+.trainer{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-height: 100%;
+    background-color: #decbc4;
+    padding: 10px;
+}
+
+.trainer-card{
+    padding: 10px;
+    width: 200px;
+    height: 320px;
+    background-color: transparent;
+    border: 2px solid #1E1031;
+    margin-left: 10px;
+    
+}
+
+.trainer-image img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;  
+}
+
+.trainer-profile h2{
+   letter-spacing: 2px; 
+   margin-top: 5px;
+   text-transform: uppercase;
+   color: #83526F;
+}
+
+.trainer-specialty{
+    color: #1E1031;
+}
+
+.trainer-bio{
+    margin-top: 20px;
+    
+}
+
+.trainer-bio p{
+    color: #1E1031;
+}
+
+.trainer-trainees{
+    margin-top: 20px;
+}
+
+.trainer-trainees h4{
+    color: #1E1031;
+}
+
+.trainer-trainees p{
+    color: #83526F;
+}
