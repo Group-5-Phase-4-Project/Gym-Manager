@@ -7,6 +7,11 @@ import { Route, Switch } from "react-router-dom"
 import Program from "./components/Program";
 
 function App() {
+  const [user, setUser] = useState({})
+
+  function getUser(signedInUser){
+    setUser(signedInUser)
+  }
   return (
     <div className="App">
     
@@ -23,7 +28,7 @@ function App() {
           
         </Route>
         <Route  exact path={"/"}>
-          <Signup />
+          <Signup getUser={getUser}/>
         </Route>
         
 
