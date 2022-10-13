@@ -29,8 +29,6 @@ function Review() {
                         </div>
                     </div>
                 )
-
-
             })}
 
         </div>
