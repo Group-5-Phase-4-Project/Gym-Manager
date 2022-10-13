@@ -9,7 +9,7 @@ function Sidebar(){
     let history = useHistory()
 
     function handleProgram(){
-       history.push("/program") 
+       history.push("/home/program") 
     }
     return(
         <div className="sidebar">
