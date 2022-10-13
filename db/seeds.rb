@@ -51,6 +51,24 @@ Trainer.create(
     no_of_trainees: 5
 )
 Trainer.create(
+    name: "Maria",
+    specialization: "Cardio",
+    background: "A expert with 4 years experience in Yoga and martial arts",
+    no_of_trainees: 10
+)
+Trainer.create(
+    name: "Kefiya",
+    specialization: "Pushups",
+    background: "A female models with a huge instagram following. Also a veteran.",
+    no_of_trainees: 6
+)
+Trainer.create(
+    name: "Arya",
+    specialization: "Yoga",
+    background: "A expert with 2 years experience in Yoga and martial arts",
+    no_of_trainees: 7
+)
+Trainer.create(
     name: "Kelvin",
     specialization: "Calisthenics",
     background: "A male models with a huge instagram following. Also a veteran.",
@@ -63,10 +81,22 @@ Trainer.create(
     no_of_trainees: 7
 )
 Trainer.create(
+    name: "Phinie",
+    specialization: "Dance",
+    background: "A resistant training expert from Kenya.",
+    no_of_trainees: 4
+)
+Trainer.create(
     name: "Zidanne",
     specialization: "Strength",
     background: "A heavy-weight champion in world strongest men competition.",
     no_of_trainees: 5
+)
+Trainer.create(
+    name: "Zara",
+    specialization: "Strength",
+    background: "A heavy-weight champion in world strongest women competition.",
+    no_of_trainees: 3
 )
 
 # puts "trainees data"
@@ -90,8 +120,8 @@ Trainee.create(
     program_id: rand(1..5),
     weight: 89,
     height: 177,
-    gender: "male",
-    password: "1234"
+    gender: "male"
+    # password: "1234"
 
 
 )
@@ -103,8 +133,8 @@ Trainee.create(
     program_id: rand(1..5),
     weight: 59,
     height: 159,
-    gender: "female",
-    password: "5678"
+    gender: "female"
+    # password: "5678"
 
 )
 Trainee.create(
@@ -115,8 +145,8 @@ Trainee.create(
     program_id: rand(1..5),
     weight: 79,
     height: 182,
-    gender: "male",
-    password: "9012"
+    gender: "male"
+    # password: "9012"
 
 
 )
@@ -128,8 +158,8 @@ Trainee.create(
     program_id: rand(1..5),
     weight: 69,
     height: 169,
-    gender: "female",
-    password: "3456"
+    gender: "female"
+    # password: "3456"
 
 )
 Trainee.create(
@@ -140,8 +170,8 @@ Trainee.create(
     program_id: rand(1..5),
     weight: 69,
     height: 189,
-    gender: "male",
-    password: "7890"
+    gender: "male"
+    # password: "7890"
 
 )
 Trainee.create(
@@ -152,8 +182,8 @@ Trainee.create(
     program_id: rand(1..5),
     weight: 91,
     height: 189,
-    gender: "male",
-    password: "1234"
+    gender: "male"
+    # password: "1234"
 
 )
 Trainee.create(
@@ -164,8 +194,8 @@ Trainee.create(
     program_id: rand(1..5),
     weight: 89,
     height: 189,
-    gender: "male",
-    password: "5678"
+    gender: "male"
+    # password: "5678"
 
 )
 Trainee.create(
@@ -176,8 +206,8 @@ Trainee.create(
     program_id: rand(1..5),
     weight: 79,
     height: 139,
-    gender: "female",
-    password: "9101"
+    gender: "female"
+    # password: "9101"
 
 )
 Trainee.create(
@@ -188,8 +218,8 @@ Trainee.create(
     program_id: rand(1..5),
     weight: 109,
     height: 89,
-    gender: "female",
-    password: "1121"
+    gender: "female"
+    # password: "1121"
 
 )
 Trainee.create(
@@ -200,8 +230,8 @@ Trainee.create(
     program_id: rand(1..5),
     weight: 89,
     height: 149,
-    gender: "female",
-    password: "1314"
+    gender: "female"
+    # password: "1314"
 
 )
 puts "starting review"

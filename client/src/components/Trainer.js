@@ -4,26 +4,43 @@ import "./Trainer.css"
 
 
 function Trainer() {
+    const [trainers, setTrainers] = useState([])
+    
+    useEffect(() =>{
+        fetch("/trainers")
+        .then(res => {
+            return res.json()
+        })
+        .then(data => {
+            setTrainers(data)
+        })
+    }, [] )
 
     return (
         <div className="trainer">
-            <div className="trainer-card">
-                <div className="trainer-profile">
-                    <div className="trainer-image">
-                        <img src="https://images.pexels.com/photos/7991680/pexels-photo-7991680.jpeg?auto=compress&cs=tinysrgb&w=400" />
+            {trainers.map(trainer => {
+                return(
+                    <div className="trainer-card">
+                    <div className="trainer-profile">
+                        <div className="trainer-image">
+                            <img src="https://images.pexels.com/photos/7991680/pexels-photo-7991680.jpeg?auto=compress&cs=tinysrgb&w=400" />
+                        </div>
+                        <h2>{trainer.name}</h2>
+                        <p className="trainer-specialty">{trainer.specialization}</p>
                     </div>
-                    <h2 className="trainer-name">Marlin</h2>
-                    <p className="trainer-specialty">Calisthenics</p>
+                    <div className="trainer-bio">
+                        <p>{trainer.background}</p>
+                        <div className="trainer-trainees">
+                        <h4>Trainees:</h4>
+                        <p>{trainer.no_of_trainees}</p>
+                        </div>
+                        
+                    </div>        
                 </div>
-                <div className="trainer-bio">
-                    <p>An expert with 4 years experience in Yoga and martial arts</p>
-                    <div className="trainer-trainees">
-                    <h4>Trainees:</h4>
-                    <p>2</p>
-                    </div>
-                    
-                </div>        
-            </div>
+
+                )
+            })}
+           
         </div>
     )
 }

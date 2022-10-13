@@ -19,7 +19,7 @@ function Review() {
         <div className="review">
             {reviews.map(review => {
                 return (
-                    <div className="review-card">
+                    <div className="review-card" key={review.id}>
                         <div className="review-profile">
                             <img className="review-img" src="https://images.pexels.com/photos/6533881/pexels-photo-6533881.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load" />
                             <h3 className="review-name">{review.name}</h3>
