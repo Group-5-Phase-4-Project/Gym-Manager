@@ -14,6 +14,9 @@ function Sidebar(){
     function handleReview(){
         history.push("/home/review") 
      }
+     function handleTrainer(){
+        history.push("/home/trainer") 
+     }
     return(
         <div className="sidebar">
             <div className="logo">
@@ -24,7 +27,7 @@ function Sidebar(){
                 <div className="stick"></div>
                 <h3 onClick={handleProgram}>Programs</h3>
                 <div className="stick"></div>
-                <h3>Trainers</h3>
+                <h3 onClick={handleTrainer}>Trainers</h3>
                 <div className="stick"></div>
                 <h3 onClick={handleReview}>Reviews</h3>
                 <div className="stick"></div>

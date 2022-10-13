@@ -6,6 +6,7 @@ import Sidebar from './components/Sidebar';
 import { Route, Switch } from "react-router-dom"
 import Program from "./components/Program";
 import Review from "./components/Review"
+import Trainer from "./components/Trainer";
 
 function App() {
   const [user, setUser] = useState({})
@@ -28,6 +29,9 @@ function App() {
           </Route>
           <Route path="/home/review">
             <Review/>
+          </Route>
+          <Route path="/home/trainer">
+            <Trainer/>
           </Route>
           
         </Route>
