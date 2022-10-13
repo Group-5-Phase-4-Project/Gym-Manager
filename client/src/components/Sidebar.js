@@ -2,9 +2,15 @@ import React from "react"
 import "./Sidebar.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDumbbell } from '@fortawesome/free-solid-svg-icons'
+import { useHistory } from "react-router-dom"
 
 
 function Sidebar(){
+    let history = useHistory()
+
+    function handleProgram(){
+       history.push("/program") 
+    }
     return(
         <div className="sidebar">
             <div className="logo">
@@ -13,11 +19,13 @@ function Sidebar(){
             <div className="options">
                 <h3>Home</h3>
                 <div className="stick"></div>
-                <h3>Programs</h3>
+                <h3 onClick={handleProgram}>Programs</h3>
                 <div className="stick"></div>
                 <h3>Trainers</h3>
                 <div className="stick"></div>
                 <h3>Reviews</h3>
+                <div className="stick"></div>
+                <h3>Logout</h3>
             </div>  
         </div>
     )

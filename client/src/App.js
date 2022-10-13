@@ -4,15 +4,20 @@ import Signup from './components/Signup';
 import Home from './components/Home'
 import Sidebar from './components/Sidebar';
 import { Route, Switch } from "react-router-dom"
+import Program from "./components/Program";
 
 function App() {
   return (
     <div className="App">
-      <Switch>
+      <Program/>
+      {/* <Switch>
         <Route path="/home">
           <Sidebar/>
           <Route path="/home/main">
             <Home/>
+          </Route>
+          <Route path="/home/program">
+            <Program/>
           </Route>
         </Route>
         <Route  exact path={"/"}>
@@ -20,7 +25,7 @@ function App() {
         </Route>
         
 
-      </Switch>
+      </Switch> */}
      
         
     </div>
