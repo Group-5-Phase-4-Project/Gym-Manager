@@ -9,8 +9,9 @@ import Program from "./components/Program";
 function App() {
   return (
     <div className="App">
-      <Program/>
-      {/* <Switch>
+    
+      
+      <Switch>
         <Route path="/home">
           <Sidebar/>
           <Route path="/home/main">
@@ -19,14 +20,15 @@ function App() {
           <Route path="/home/program">
             <Program/>
           </Route>
+          
         </Route>
         <Route  exact path={"/"}>
           <Signup />
         </Route>
         
 
-      </Switch> */}
-     
+      </Switch>  
+      
         
     </div>
   );
