@@ -87,7 +87,10 @@ Trainee.create(
     age: 25,
     program_picked: "Yoga",
     trainer_id: rand(1..4),
-    program_id: rand(1..5)
+    program_id: rand(1..5),
+    weight: 89,
+    height: 177,
+    gender: "male"
 
 )
 Trainee.create(
@@ -95,7 +98,10 @@ Trainee.create(
     age: 24,
     program_picked: "Strength",
     trainer_id: rand(1..4),
-    program_id: rand(1..5)
+    program_id: rand(1..5),
+    weight: 59,
+    height: 159,
+    gender: "female"
 
 )
 Trainee.create(
@@ -103,7 +109,10 @@ Trainee.create(
     age: 24,
     program_picked: "Calisthenics",
     trainer_id: rand(1..4),
-    program_id: rand(1..5)
+    program_id: rand(1..5),
+    weight: 79,
+    height: 182,
+    gender: "male"
 
 
 )
@@ -112,7 +121,10 @@ Trainee.create(
     age: 21,
     program_picked: "Strength",
     trainer_id: rand(1..4),
-    program_id: rand(1..5)
+    program_id: rand(1..5),
+    weight: 69,
+    height: 169,
+    gender: "female"
 
 )
 Trainee.create(
@@ -120,7 +132,10 @@ Trainee.create(
     age: 22,
     program_picked: "Pushups",
     trainer_id: rand(1..4),
-    program_id: rand(1..5)
+    program_id: rand(1..5),
+    weight: 69,
+    height: 189,
+    gender: "male"
 
 )
 Trainee.create(
@@ -128,7 +143,10 @@ Trainee.create(
     age: 22,
     program_picked: "Dance",
     trainer_id: rand(1..4),
-    program_id: rand(1..5)
+    program_id: rand(1..5),
+    weight: 91,
+    height: 189,
+    gender: "male"
 
 )
 Trainee.create(
@@ -136,7 +154,10 @@ Trainee.create(
     age: 26,
     program_picked: "Dance",
     trainer_id: rand(1..4),
-    program_id: rand(1..5)
+    program_id: rand(1..5),
+    weight: 89,
+    height: 189,
+    gender: "male"
 
 )
 Trainee.create(
@@ -144,7 +165,10 @@ Trainee.create(
     age: 27,
     program_picked: "Yoga",
     trainer_id: rand(1..4),
-    program_id: rand(1..5)
+    program_id: rand(1..5),
+    weight: 79,
+    height: 139,
+    gender: "female"
 
 )
 Trainee.create(
@@ -152,7 +176,10 @@ Trainee.create(
     age: 22,
     program_picked: "Pushups",
     trainer_id: rand(1..4),
-    program_id: rand(1..5)
+    program_id: rand(1..5),
+    weight: 109,
+    height: 89,
+    gender: "female"
 
 )
 Trainee.create(
@@ -160,7 +187,10 @@ Trainee.create(
     age: 25,
     program_picked: "Calisthenics",
     trainer_id: rand(1..4),
-    program_id: rand(1..5)
+    program_id: rand(1..5),
+    weight: 89,
+    height: 149,
+    gender: "female"
 
 )
 puts "starting review"

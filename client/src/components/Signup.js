@@ -3,12 +3,32 @@ import "./Signup.css"
 import { quotes } from "./data"
 import { useHistory } from "react-router-dom"
 
-function Signup() {
+function Signup({getUser}) {
+    const [signupDetails, setSignupDetails] = useState({name: "", password: "", age: "", gender: "", weight: "", height: ""})
     let history = useHistory()
+
+    const handleChange = (e) => {
+        setSignupDetails(sign => ({ ...sign, [e.target.name]: e.target.value }))
+    }
 
     function handleSubmit(e){
         e.preventDefault()
-        history.push("/home/main")
+        const serverOptions = {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(signupDetails)
+        }
+        fetch(`/trainees`, serverOptions)
+        .then(r => r.json())
+        .then((user) => {
+            getUser(user)
+            history.push("/home/main")
+
+        })
+        
+      
     }
     
 
@@ -20,36 +40,13 @@ function Signup() {
                     <h1>Just Gym-It</h1>
                     
                     <form onSubmit={handleSubmit}>
-                        <input type="text" placeholder="Username" name="username" />
-                        <input type="password" placeholder="Password" name="password" />
-                        <select name="gender">
-                            <option value="">--Select gender--</option>
-                            <option value="male">Male</option>
-                            <option value="female">Female</option>
-                        </select>
-                        <select name="age">
-                            <option value="">--Select age--</option>
-                            <option value="18-25">18-25</option>
-                            <option value="26-35">26-35</option>
-                            <option value="36-45">36-45</option>
-                            <option value="46 and above">46 and above</option>
-                        </select>
-                        <select name="weight">
-                            <option value="">--Select weight--</option>
-                            <option value="18-25">18-25</option>
-                            <option value="26-35">26-35</option>
-                            <option value="36-45">36-45</option>
-                            <option value="46 and above">46 and above</option>
-                        </select>
-                        <select name="height">
-                            <option value="">--Select height--</option>
-                            <option value="18-25">18-25</option>
-                            <option value="26-35">26-35</option>
-                            <option value="36-45">36-45</option>
-                            <option value="46 and above">46 and above</option>
-                        </select>
+                        <input type="text" placeholder="Username" name="name" value={signupDetails.name} onChange={handleChange}/>
+                        <input type="password" placeholder="Password" name="password" onChange={handleChange} />
+                        <input type="text" placeholder="Age" name="age" value={signupDetails.age} onChange={handleChange} />
+                        <input type="text" placeholder="Gender" name="gender" value={signupDetails.gender} onChange={handleChange} />
+                        <input type="text" placeholder="Height in cm" name="height" value={signupDetails.height} onChange={handleChange} />
+                        <input type="text" placeholder="Weight in kgs" name="weight" value={signupDetails.weight} onChange={handleChange} />
                         <button className="signup-btn">Sign Up</button>
-                       
                     </form>
                 </div>
             </div>

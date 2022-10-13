@@ -20,7 +20,7 @@ function App() {
         <Route path="/home">
           <Sidebar/>
           <Route path="/home/main">
-            <Home/>
+            <Home user={user}/>
           </Route>
           <Route path="/home/program">
             <Program/>
