@@ -1,8 +1,15 @@
 import React, {useState, useEffect} from "react"
 import "./Signup.css"
 import { quotes } from "./data"
+import { useHistory } from "react-router-dom"
 
 function Signup() {
+    let history = useHistory()
+
+    function handleSubmit(e){
+        e.preventDefault()
+        history.push("/home/main")
+    }
     
 
     return (
@@ -12,7 +19,7 @@ function Signup() {
                 <div className="left-container">
                     <h1>Just Gym-It</h1>
                     
-                    <form>
+                    <form onSubmit={handleSubmit}>
                         <input type="text" placeholder="Username" name="username" />
                         <input type="password" placeholder="Password" name="password" />
                         <select name="gender">
