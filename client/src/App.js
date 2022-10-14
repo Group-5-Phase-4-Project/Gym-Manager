@@ -7,6 +7,7 @@ import { Route, Switch } from "react-router-dom"
 import Program from "./components/Program";
 import Review from "./components/Review"
 import Trainer from "./components/Trainer";
+import Login from "./components/Login";
 
 function App() {
   const [user, setUser] = useState({})

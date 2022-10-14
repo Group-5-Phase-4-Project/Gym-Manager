@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react"
 import "./Signup.css"
 import { quotes } from "./data"
 import { useHistory } from "react-router-dom"
-import Login from "./Login"
+
 
 function Signup({ getUser }) {
     const [signupDetails, setSignupDetails] = useState({ name: "", password: "", age: "", gender: "", weight: "", height: "" })
@@ -55,7 +55,7 @@ function Signup({ getUser }) {
                         <input type="text" placeholder="Weight in kgs" name="weight" value={signupDetails.weight} onChange={handleChange} />
                         <button className="signup-btn">Sign Up</button>
                     </form>
-                    <Login/>
+                 
                 </div>
 
                
