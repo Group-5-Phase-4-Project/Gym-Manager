@@ -1,9 +1,14 @@
 import React, { useState, useEffect } from "react"
 import "./Review.css"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPencil, faTrashCan } from '@fortawesome/free-solid-svg-icons'
+import Program from "./Program";
 
 
-function Review() {
-    const [reviews, setReviews] = useState([])
+function Review({}) {
+    const [reviews, setReviews] = useState([]);
+    const [name, setName] = useState('');
+    const [body, setBody] = useState('')
 
     useEffect(() => {
         fetch("/reviews")
@@ -15,9 +20,45 @@ function Review() {
             })
     }, [])
 
+    // function handleChange(e){
+    //     setReviews(sign => ({ ...sign, [e.target.name]: e.target.value }))
+
+    // }
+
+    function handlePost(e) {
+        e.preventDefault()
+        const serverOptions = {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                name: name,
+                body: body,
+            })
+        }
+        fetch(`/reviews`, serverOptions)
+            .then(r => r.json())
+            .then((review) => {
+                setReviews((reviews) => [review, ...reviews]);
+                setName('');
+                setBody('')
+            })
+            .catch((err) => {
+                console.log(err.message)
+            })
+    }
+function handleDelete(id){
+    fetch(`/reviews/${id}`, {method: "DELETE"})
+    .then(r => r.json())
+    .then(()=> setReviews(reviews => reviews.filter(review => review.id !== id)))
+    
+}
+
+
     return (
         <div className="review">
-            {reviews.map(review => {
+            {reviews.slice(0,5).map(review => {
                 return (
                     <div className="review-card" key={review.id}>
                         <div className="review-profile">
@@ -27,9 +68,21 @@ function Review() {
                         <div className="review-text">
                             <p>{review.body}</p>
                         </div>
+                        <div>
+                            <FontAwesomeIcon icon={faTrashCan} className="trashcan" onClick={() => handleDelete(review.id)}/>
+
+                        </div>
                     </div>
                 )
             })}
+
+            
+
+            <form className="review-form" onSubmit={handlePost}>
+                <input type="text" placeholder="username" onChange={(e)=> setName(e.target.value)} value={name}/>
+                <textarea placeholder="Add Review" onChange={(e) => setBody(e.target.value)} value={body}/> 
+                <button className="review-button">Post Review</button>
+            </form>
 
         </div>
     )

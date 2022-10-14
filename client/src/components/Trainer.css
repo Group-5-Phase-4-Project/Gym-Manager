@@ -3,7 +3,7 @@
     flex-wrap: wrap;
     width: 100%;
     max-height: 100%;
-    background-color: #decbc4;
+    /* background-color: #decbc4; */
     padding: 10px;
     justify-content: space-between;
 }
