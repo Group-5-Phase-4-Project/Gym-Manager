@@ -25,6 +25,6 @@ class ReviewsController < ApplicationController
 
     private 
     def review_params
-        params.permit(:name, :age, :program_picked)
+        params.permit(:name, :body)
     end
 end
