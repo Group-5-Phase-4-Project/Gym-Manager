@@ -64,16 +64,9 @@ input::placeholder {
     color: #1E1031;
 }
 
-.left-login{
-    display: block;
-    z-index: 100;
-    background-color: #1E1031;
-    position: absolute;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    padding: 30px;
-}
+
+    
+
 
 .left-login-container{
     margin: 120px auto;
@@ -142,5 +135,18 @@ input::placeholder {
     z-index: 1;
     text-decoration: underline;
     cursor: pointer;
+    display: block;
 
 }
+
+.clicked{
+    display: none;
+    margin-top: 200px;
+    font-size: 20px;
+    z-index: 1;
+    text-decoration: underline;
+    cursor: pointer;
+    
+
+}
+
