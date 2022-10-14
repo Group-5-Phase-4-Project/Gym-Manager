@@ -81,6 +81,12 @@ Trainer.create(
     no_of_trainees: 7
 )
 Trainer.create(
+    name: "Bien",
+    specialization: "Dance",
+    background: "A dancer from Kenya.",
+    no_of_trainees: 7
+)
+Trainer.create(
     name: "Phinie",
     specialization: "Dance",
     background: "A resistant training expert from Kenya.",
