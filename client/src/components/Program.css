@@ -1,56 +1,61 @@
 .program{
-    
     width: 100%;
-    
+    max-height: 100%;
+    background-color: blue;
 }
 
-.program .panel-container{
-    
-    height: 100%;
+.panel-container{
     display: flex;
-}
-.panel{
-    width: 200px;
-    height: 100%;
-    position: relative;
-    cursor: pointer;
-    transition: 0.5s ease;
-}
-
-.panel:hover{
-    width: 400px;
-}
-
-.panel:hover h3{
-    display: none;
-}
-
-.panel:hover .description{
-    display: block;
-    position: absolute;
-    bottom: 20px;
-    color: #decbc4;
+    flex-wrap: wrap;
+    padding: 10px;
+    justify-content: space-between;
     
+
 }
 
+.panel{
+width: 300px;
+height: 300px;
+background-color: #decbc4;
+margin-bottom: 20px;
+position: relative;
+
+
+}
 
 .panel img{
-    height: 100%;
-    
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
 }
 
-.panel h3{
+.panel-name{
+    display: flex;
+    justify-content: space-between;
+}
+
+.panel-name h3{
+    color: #83526F;
+    margin-left: 10px;
+}
+
+.panel-name p{
+    color: #1e1031;
+    margin-right: 10px;
+}
+
+.icon{
     position: absolute;
-    color: #decbc4;
-    bottom: 20px;
-    right: 20px;
-    transition: 0.5s ease;
+    top: 10px;
+    left: 260px;
+    font-size: 20px;
+    color: #1e1031;
+    background-color: #decbc4;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
 }
 
-.panel .description{
-    display: none;
-    transition: 0.5s ease-in-out;
-    color: #decbc4;
-    background-color: blue;
-    width: 400px;
+.description{
+    color: #1e1031;
 }
