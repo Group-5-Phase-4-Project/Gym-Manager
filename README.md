@@ -1,6 +1,7 @@
-## Introduction
+# Just Gym It Management System
+## ABOUT THE PROJECT
 
-
+This app is designed to help gym enthusiasts have access to gym services online. 
 
 ## Setup
 
@@ -21,8 +22,14 @@ $ rails s
 
 And you can run React in another terminal with:
 
-```console
+```Terminal
 $ npm start --prefix client
 ```
+
+## License
+
+This project is licensed under [MIT](https://opensource.org/licenses/MIT) license.
+
+Give a ⭐️ if this project helped you!
 
 # Just Gym-It
