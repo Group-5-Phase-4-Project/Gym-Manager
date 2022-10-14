@@ -1,25 +1,28 @@
-# README
+## Introduction
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
 
-* Ruby version
+## Setup
 
-* System dependencies
+Some starter code in place for Rails API backend and React frontend to set up, run:
 
-* Configuration
+```Terminal
+$ bundle install
+$ rails db:migrate db:seed
+$ npm install --prefix client
+```
 
-* Database creation
+It will also be helpful to see what's happening during the request/response cycle by running the
+app in the browser. You can run the Rails server with:
 
-* Database initialization
+```Terminal
+$ rails s
+```
 
-* How to run the test suite
+And you can run React in another terminal with:
 
-* Services (job queues, cache servers, search engines, etc.)
+```console
+$ npm start --prefix client
+```
 
-* Deployment instructions
-
-* ...
 # Just Gym-It
