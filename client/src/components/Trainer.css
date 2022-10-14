@@ -5,12 +5,13 @@
     max-height: 100%;
     background-color: #decbc4;
     padding: 10px;
+    justify-content: space-between;
 }
 
 .trainer-card{
     padding: 10px;
-    width: 200px;
-    height: 320px;
+    width: 180px;
+    height: 310px;
     background-color: transparent;
     border: 2px solid #1E1031;
     margin-left: 10px;
@@ -45,7 +46,7 @@
 }
 
 .trainer-trainees{
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .trainer-trainees h4{
