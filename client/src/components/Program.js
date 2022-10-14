@@ -21,6 +21,7 @@ function Program(){
      <div className="program">
          <div className="panel-container">
              {programs.map(program => {
+                 
                  return(
                     <div className="panel" key={program.id}>
                     <img src={program.image}/>

@@ -18,6 +18,11 @@
     color: #decbc4;
     font-size: 100px;
     transition: 0.5s ease-in;
+    margin: 70px auto;
+}
+
+.two{
+    margin-top: 10px;
 }
 
 .home-container{

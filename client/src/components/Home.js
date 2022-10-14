@@ -7,7 +7,7 @@ function Home({user}) {
         <div className="home" style={{backgroundImage: `url("https://images.pexels.com/photos/7991666/pexels-photo-7991666.jpeg?auto=compress&cs=tinysrgb&w=400")`}}>
             <div className="home-blur">
                 <div className="home-container">
-                    <h1 className="one">Welcome,</h1>
+                    <h1 className="one">Hey,</h1>
                     <h1 className="two">{user.name}</h1>
 
                 </div>
