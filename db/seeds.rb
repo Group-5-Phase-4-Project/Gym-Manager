@@ -118,7 +118,7 @@ Trainer.create(
 
 
 puts "starting trainees data"
-Trainee.create(
+Trainee.create!(
     name: "Titus",
     age: 25,
     program_picked: "Yoga",
@@ -126,8 +126,8 @@ Trainee.create(
     program_id: rand(1..5),
     weight: 89,
     height: 177,
-    gender: "male"
-    # password: "1234"
+    gender: "male",
+    password: "1234"
 
 
 )
@@ -139,8 +139,8 @@ Trainee.create(
     program_id: rand(1..5),
     weight: 59,
     height: 159,
-    gender: "female"
-    # password: "5678"
+    gender: "female",
+    password: "5678"
 
 )
 Trainee.create(
@@ -151,8 +151,8 @@ Trainee.create(
     program_id: rand(1..5),
     weight: 79,
     height: 182,
-    gender: "male"
-    # password: "9012"
+    gender: "male",
+    password: "9012"
 
 
 )
@@ -164,8 +164,8 @@ Trainee.create(
     program_id: rand(1..5),
     weight: 69,
     height: 169,
-    gender: "female"
-    # password: "3456"
+    gender: "female",
+    password: "3456"
 
 )
 Trainee.create(
@@ -176,8 +176,8 @@ Trainee.create(
     program_id: rand(1..5),
     weight: 69,
     height: 189,
-    gender: "male"
-    # password: "7890"
+    gender: "male",
+    password: "7890"
 
 )
 Trainee.create(
@@ -188,8 +188,8 @@ Trainee.create(
     program_id: rand(1..5),
     weight: 91,
     height: 189,
-    gender: "male"
-    # password: "1234"
+    gender: "male",
+    password: "1234"
 
 )
 Trainee.create(
@@ -200,8 +200,8 @@ Trainee.create(
     program_id: rand(1..5),
     weight: 89,
     height: 189,
-    gender: "male"
-    # password: "5678"
+    gender: "male",
+    password: "5678"
 
 )
 Trainee.create(
@@ -212,8 +212,8 @@ Trainee.create(
     program_id: rand(1..5),
     weight: 79,
     height: 139,
-    gender: "female"
-    # password: "9101"
+    gender: "female",
+    password: "9101"
 
 )
 Trainee.create(
@@ -224,8 +224,8 @@ Trainee.create(
     program_id: rand(1..5),
     weight: 109,
     height: 89,
-    gender: "female"
-    # password: "1121"
+    gender: "female",
+    password: "1121"
 
 )
 Trainee.create(
@@ -236,40 +236,40 @@ Trainee.create(
     program_id: rand(1..5),
     weight: 89,
     height: 149,
-    gender: "female"
-    # password: "1314"
+    gender: "female",
+    password: "1314"
 
 )
 puts "starting review"
-Review.create(
+Review.create!(
     name: "Annitah",
     body: "I love the programs that I get from my trainers. Kudos!",
-    program_id: rand(1..5),
-    trainee_id: rand(1..10)
+    program_id: Program.all[rand(Program.count)].id,
+    trainee_id: Trainee.all[rand(Trainee.count)].id
 )
 Review.create(
     name: "Daisy",
     body: "I did not know what my body requires in terms of exercise untill I met my trainer. Thank you.",
-    program_id: rand(1..5),
-    trainee_id: rand(1..10)
+    program_id: Program.all[rand(Program.count)].id,
+    trainee_id: Trainee.all[rand(Trainee.count)].id
 )
 Review.create(
     name: "Glenn",
     body: "My program helped me rediscover my inner-self, now am more productive in other areas!",
-    program_id: rand(1..5),
-    trainee_id: rand(1..10)
+    program_id: Program.all[rand(Program.count)].id,
+    trainee_id: Trainee.all[rand(Trainee.count)].id
 )
 Review.create(
     name: "Titus",
     body: "I was overweight but I realized that it only takes a few month to loose weight. Thanks to Kelvin! ",
-    program_id: rand(1..5),
-    trainee_id: rand(1..10)
+    program_id: Program.all[rand(Program.count)].id,
+    trainee_id: Trainee.all[rand(Trainee.count)].id
 )
 Review.create(
     name: "Precious",
     body: "Gym-Manager is the best!",
-    program_id: rand(1..5),
-    trainee_id: rand(1..10)
+    program_id: Program.all[rand(Program.count)].id,
+    trainee_id: Trainee.all[rand(Trainee.count)].id
 )
 puts "Done seeding"
 
