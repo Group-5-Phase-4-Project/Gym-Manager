@@ -40,6 +40,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_13_192902) do
     t.integer "weight"
     t.integer "height"
     t.string "gender"
+    t.string "password_digest"
   end
 
   create_table "trainers", force: :cascade do |t|
