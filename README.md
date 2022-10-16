@@ -54,7 +54,7 @@ The Trainers page displays all the gym's trainers and their details. A user can 
 
 This page displays the reviews of different trainees. It contains a form that allows the user to post a review. There is also a delete button that allows a user to delete a post
 
-### Logout
+### 7. Logout
 The logged-in or signed-in user is able to log out of the application. The logout option routes back to the Login Page.
 
 ## License
