@@ -1,11 +1,87 @@
+.login{
+    padding: 0px;
+    width: 800px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    height: 90vh;
+    margin: 30px auto;
+    position: relative;
+
+}
+
 .left-login{
-    display: none;
-    width: 100%;
+    
+    width: 50%;
     background-color: #1E1031;
-    position: absolute;
-    top: 0;
-    height: 100%;
-    width: 100%;
+    
+    
+    height: 90vh;
+    width: 50%;
     padding: 30px;
     left: 0;
 }
+
+.left-login-container{
+    margin: 120px auto;
+}
+
+.left-login-container h1{
+    color: #DECBC4;
+}
+.left-login-container form{
+    margin-top: 20px;
+}
+
+.left-login-container form input{
+    color: #DECBC4;
+}
+
+.left-login-container p{
+    color: #DECBC4;
+    text-decoration: underline;
+    margin-top: 100px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.left-login button{
+    background-color: #DECBC4;
+    color: #1E1031;
+}.right-blur {
+    height: 90vh;
+    width: 50%;
+    background: rgba(30, 16, 49, 0.6);
+    -webkit-backdrop-filter: blur(7px);
+    backdrop-filter: blur(7px);
+}
+
+.right-container {
+    width: 50%;
+    color: #DECBC4;
+    align-items: center;
+    justify-content: center;
+    margin: 120px auto;
+    
+}
+
+.right-text span {
+    font-size: 120px;
+}
+
+.right-text h2 {
+    font-size: 30px;
+    margin-top: -30px;
+}
+
+.right-text-login {
+    margin-top: 200px;
+    font-size: 20px;
+    z-index: 1;
+    text-decoration: underline;
+    cursor: pointer;
+    display: block;
+
+}
+

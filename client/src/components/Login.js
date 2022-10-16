@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react"
+import React, { useState } from "react"
 import "./Login.css"
 import {quotes} from "./data"
 import { useHistory } from "react-router-dom"
@@ -8,7 +8,7 @@ function Login({getUser}) {
     const [password, setPassword] = useState("")
     const [user, setUser] = useState({})
 
-    let history = useHistory
+    let history = useHistory()
     function handleLogin(e){
         e.preventDefault()
         if (user.password === password) {
@@ -27,17 +27,21 @@ function Login({getUser}) {
         })
     }
 
+    function handleSignup(){
+        history.push("./signup")
+    }
+
     return (
         <div className="login" style={{ backgroundImage: `url("https://images.pexels.com/photos/4944311/pexels-photo-4944311.jpeg?auto=compress&cs=tinysrgb&w=400")` }}>
             <div className="left-login">
                 <div className="left-login-container">
-                    <h1 onSubmit={handleLogin}>Just Gym-It</h1>
-                    <form>
+                    <h1 >Just Gym-It</h1>
+                    <form onSubmit={handleLogin}>
                         <input type="text" placeholder="Username" value={username}  onChange={(e)=> setUsername(e.target.value)} onBlur={handleFetch} autoComplete="off"/>
                         <input type="password" placeholder="Password" value={password} onChange={(e)=>setPassword(e.target.value)}/>
                         <button className="signup-btn">Login</button>
                     </form>
-                    <p >Sign Up Here</p>
+                    <p onClick={handleSignup}>Sign Up Here</p>
                 </div>
             </div>
 
@@ -49,9 +53,7 @@ function Login({getUser}) {
                         
                     </div>
 
-                    <div className="right-text-login">
-                        <p>Sign In Here</p>
-                    </div>
+                   
 
                 </div>
             </div>
