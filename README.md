@@ -26,7 +26,14 @@ And you can run React in another terminal with:
 $ npm start --prefix client
 ```
 
-## First, You have to signup to the site and have an account
+## Application Content
+The application contains:
+
+### 1. Login Page
+
+![Screenshot from 2022-10-16 22-19-22](https://user-images.githubusercontent.com/73560150/196054066-4ebdf937-d749-4e97-883f-e7a4ee5d0852.png)
+
+ First, You have to signup to the site and have an account
 
 ![signup](https://user-images.githubusercontent.com/86743519/195870068-8fa56079-248f-4b32-a26e-f2323242983c.png)
 
