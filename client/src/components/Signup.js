@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import "./Signup.css"
 import { quotes } from "./data"
 import { useHistory } from "react-router-dom"
@@ -6,7 +6,6 @@ import { useHistory } from "react-router-dom"
 
 function Signup({ getUser }) {
     const [signupDetails, setSignupDetails] = useState({ name: "", password: "", age: "", gender: "", weight: "", height: "" })
-    const [isActive, setIsActive] = useState(false)
     let history = useHistory()
 
     const handleChange = (e) => {
@@ -33,7 +32,7 @@ function Signup({ getUser }) {
     }
 
     function handleLoggingIn(e){
-        e.currentTarget.classList.add('clicked')
+        history.push("/")
     }
 
 
