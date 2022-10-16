@@ -20,13 +20,16 @@ function Sidebar(){
      function handleLogout(){
         history.push("/")
      }
+     function handleHome(){
+         history.push("/home/main")
+     }
     return(
         <div className="sidebar">
             <div className="logo">
                 <h1>Just Gym-It <FontAwesomeIcon icon={faDumbbell}/></h1>
             </div>
             <div className="options">
-                <h3>Home</h3>
+                <h3 onClick={handleHome}>Home</h3>
                 <div className="stick"></div>
                 <h3 onClick={handleProgram}>Programs</h3>
                 <div className="stick"></div>
