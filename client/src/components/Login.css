@@ -38,6 +38,10 @@
     color: #DECBC4;
 }
 
+.left-login-container form input::placeholder{
+    color: #DECBC4;
+}
+
 .left-login-container p{
     color: #DECBC4;
     text-decoration: underline;
