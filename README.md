@@ -33,9 +33,11 @@ The application contains:
 
 ![Screenshot from 2022-10-16 22-19-22](https://user-images.githubusercontent.com/73560150/196054066-4ebdf937-d749-4e97-883f-e7a4ee5d0852.png)
 
- First, You have to signup to the site and have an account
+### 2. Signup Page
 
 ![signup](https://user-images.githubusercontent.com/86743519/195870068-8fa56079-248f-4b32-a26e-f2323242983c.png)
+
+The Login and Signup pages all take in the user's details and route to the home page.
 
 ## Navigating around the home, programs, trainers, reviews, logout tabs at the side bar
 
