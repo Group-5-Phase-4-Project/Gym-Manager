@@ -8,13 +8,27 @@ import Program from "./components/Program";
 import Review from "./components/Review"
 import Trainer from "./components/Trainer";
 import Login from "./components/Login";
+import { useHistory } from "react-router-dom";
 
 function App() {
   const [user, setUser] = useState({})
+  let history = useHistory()
 
   function getUser(signedInUser){
     setUser(signedInUser)
   }
+
+  useEffect((() => {
+    fetch("/me")
+    .then(r =>{
+      if(r.ok) {
+        r.json().then(setUser)
+        history.push("/home/main")
+      }
+    })
+   
+  }), [])
+  
   return (
     <div className="App">
     

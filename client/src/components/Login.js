@@ -6,29 +6,29 @@ import { useHistory } from "react-router-dom"
 function Login({getUser}) {
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
-    const [user, setUser] = useState({})
-
+   
     let history = useHistory()
     function handleLogin(e){
         e.preventDefault()
-        if (user.password === password) {
-            history.push("/home/main")
-        }else {
-            alert("Incorrect Password")
-        }
-    }
-
-    function handleFetch(){
-        fetch('/trainees')
-        .then(r => r.json())
-        .then(user => {
-            setUser(user)
-            getUser(user)
+        fetch("/login", {
+           "method": "POST",
+           "headers": {"Content-Type": "application/json"},
+           "body": JSON.stringify({
+               name: username,
+               password: password
+           })
+        }).then(r => {
+            if(r.ok){
+                r.json().then(getUser)
+                history.push("/home/main")
+            }
         })
+
     }
 
+    
     function handleSignup(){
-        history.push("./signup")
+        history.push("/signup")
     }
 
     return (
@@ -37,8 +37,8 @@ function Login({getUser}) {
                 <div className="left-login-container">
                     <h1 >Just Gym-It</h1>
                     <form onSubmit={handleLogin}>
-                        <input type="text" placeholder="Username" value={username}  onChange={(e)=> setUsername(e.target.value)} onBlur={handleFetch} autoComplete="off"/>
-                        <input type="password" placeholder="Password" value={password} onChange={(e)=>setPassword(e.target.value)}/>
+                        <input type="text" placeholder="Username" value={username}  onChange={(e)=> setUsername(e.target.value)}  autoComplete="off" required/>
+                        <input type="password" placeholder="Password" value={password} onChange={(e)=>setPassword(e.target.value)} required/>
                         <button className="signup-btn">Login</button>
                     </form>
                     <p onClick={handleSignup}>Sign Up Here</p>

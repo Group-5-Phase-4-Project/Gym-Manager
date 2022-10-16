@@ -21,17 +21,20 @@ function Signup({ getUser }) {
             },
             body: JSON.stringify(signupDetails)
         }
-        fetch(`/trainees`, serverOptions)
-            .then(r => r.json())
-            .then((user) => {
-                getUser(user)
-                history.push("/home/main")
-
+        fetch(`/signup`, serverOptions)
+            .then(r => {
+                if(r.ok){
+                    r.json().then(getUser)
+                    history.push("/home/main")
+                }else {
+                    r.json().then(console.log)
+                }
             })
-
+           
     }
 
     function handleLoggingIn(e){
+
         history.push("/")
     }
 
@@ -46,12 +49,12 @@ function Signup({ getUser }) {
                     <h1>Just Gym-It</h1>
 
                     <form onSubmit={handleSubmit}>
-                        <input type="text" placeholder="Username" name="name" value={signupDetails.name} onChange={handleChange} />
-                        <input type="password" placeholder="Password" name="password" onChange={handleChange} />
-                        <input type="text" placeholder="Age" name="age" value={signupDetails.age} onChange={handleChange} />
-                        <input type="text" placeholder="Gender" name="gender" value={signupDetails.gender} onChange={handleChange} />
-                        <input type="text" placeholder="Height in cm" name="height" value={signupDetails.height} onChange={handleChange} />
-                        <input type="text" placeholder="Weight in kgs" name="weight" value={signupDetails.weight} onChange={handleChange} />
+                        <input type="text" placeholder="Username" name="name" value={signupDetails.name} onChange={handleChange} required/>
+                        <input type="password" placeholder="Password" name="password" onChange={handleChange} required/>
+                        <input type="text" placeholder="Age" name="age" value={signupDetails.age} onChange={handleChange} required/>
+                        <input type="text" placeholder="Gender" name="gender" value={signupDetails.gender} onChange={handleChange} required/>
+                        <input type="text" placeholder="Height in cm" name="height" value={signupDetails.height} onChange={handleChange} required/>
+                        <input type="text" placeholder="Weight in kgs" name="weight" value={signupDetails.weight} onChange={handleChange} required/>
                         <button className="signup-btn">Sign Up</button>
                     </form>
                  
