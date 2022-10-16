@@ -32,7 +32,7 @@ function Signup({ getUser }) {
 
     }
 
-    function handleLogin(e){
+    function handleLoggingIn(e){
         e.currentTarget.classList.add('clicked')
     }
 
@@ -68,7 +68,7 @@ function Signup({ getUser }) {
                     </div>
 
                     <div className="right-text-login">
-                        <p onClick={handleLogin}>Sign In Here</p>
+                        <p onClick={handleLoggingIn}>Sign In Here</p>
                     </div>
 
                 </div>
