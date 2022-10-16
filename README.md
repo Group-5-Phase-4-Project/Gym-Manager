@@ -1,5 +1,5 @@
 # Just Gym It Management System
-This app is designed to help gym enthusiasts have access to gym services online. 
+This app is designed to help gym enthusiasts have access to gym services online. It makes use of authentication/authorization to ensure that the user logs into the site and stays logged in via user ID in the session hash.
 
 ## Setup
 
@@ -10,16 +10,12 @@ $ bundle install
 $ rails db:migrate db:seed
 $ npm install --prefix client
 ```
-
 It will also be helpful to see what's happening during the request/response cycle by running the
 app in the browser. You can run the Rails server with:
-
 ```Terminal
 $ rails s
 ```
-
 And you can run React in another terminal with:
-
 ```Terminal
 $ npm start --prefix client
 ```
