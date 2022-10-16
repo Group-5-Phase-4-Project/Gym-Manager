@@ -17,6 +17,9 @@ function Sidebar(){
      function handleTrainer(){
         history.push("/home/trainer") 
      }
+     function handleLogout(){
+        history.push("/")
+     }
     return(
         <div className="sidebar">
             <div className="logo">
@@ -31,7 +34,7 @@ function Sidebar(){
                 <div className="stick"></div>
                 <h3 onClick={handleReview}>Reviews</h3>
                 <div className="stick"></div>
-                <h3>Logout</h3>
+                <h3 onClick={handleLogout}> Logout</h3>
             </div>  
         </div>
     )
