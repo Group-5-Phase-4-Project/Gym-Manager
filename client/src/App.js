@@ -37,6 +37,9 @@ function App() {
           
         </Route>
         <Route  exact path={"/"}>
+          <Login getUser={getUser}/>
+        </Route>
+        <Route  exact path={"/signup"}>
           <Signup getUser={getUser}/>
         </Route>
         
