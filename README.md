@@ -1,6 +1,4 @@
 # Just Gym It Management System
-## ABOUT THE PROJECT
-
 This app is designed to help gym enthusiasts have access to gym services online. 
 
 ## Setup
